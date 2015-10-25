@@ -14,28 +14,8 @@
   </div>
 </div>
 
-<script src="jquery-1.11.1.min.js"></script>
-<script>
-	$(document).ready(function(){
-	  $('#container').on('click', '#button', function(e){
-	    var source = $('#source').val();
-		$('#source').val(source.replace(";", "\u037E"));
-		print_info();
-	  });
-	  $('#container').on('change keyup paste', '#source', hide_info);
-	});
-	
-	function print_info(){
-		$('<h2 id="info">Copy results and piss off the programmers!</h2>').insertBefore('#source');
-		$('#info').hide().fadeIn('2000');
-	}
-	
-	function hide_info(){
-	    $('#info').slideUp('2000');
-		sleep(3000);
-		$('#info').remove();
-	}
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="prank.js"></script>
 
 </body>
 </html>
