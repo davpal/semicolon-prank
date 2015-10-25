@@ -1,7 +1,7 @@
 $(document).ready(function(){
   	$('.container').on('click', '#button', function(e){
-    	var source = $('.source').val();
-		$('.source').val(source.replace(";", "\u037E"));
+    	var source = $('.source').text();
+		$('.source').text(source.replace(";", "\u037E"));
 		print_info();
   	});
   	$('.container').on('change keyup paste', '.source', hide_info);
@@ -13,7 +13,5 @@ function print_info(){
 }
 
 function hide_info(){
-    $('#info').slideUp('2000');
-	sleep(3000);
-	$('#info').remove();
+    $('#info').slideUp('2000').delay(3000).remove();
 }
